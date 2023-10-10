@@ -1,0 +1,90 @@
+<!-- fragment1_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        >
+
+
+
+        <Button
+            android:id="@+id/b1"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:background="@drawable/btn_login"
+            android:backgroundTint="@color/red"
+            android:fontFamily="sans-serif-black"
+            android:padding="5dp"
+            android:text="Pending"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:background="@drawable/btn_login"
+            android:backgroundTint="@color/green"
+            android:fontFamily="sans-serif-black"
+            android:padding="5dp"
+            android:text="Complete"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+
+    </LinearLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+
+        >
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginBottom="50dp"
+
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+    <!-- Add more UI elements or customize the layout as per your requirements -->
+
+</LinearLayout>
