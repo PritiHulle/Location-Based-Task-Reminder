@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.taskmanagerpro">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDfDxXEDGj_pDrI7zM_WNYlEG6JEAXkB6o" />
+
+        <activity android:name=".ui.ActivityAbout"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+
+
+        <activity android:name=".ui.Home1"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+
+            />
+
+
+
+        <activity android:name=".ui.Web"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+
+
+            />
+
+        <activity android:name=".ui.ProfileMain"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+
+
+            />
+
+        <activity
+            android:name=".ui.SendToComplete"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <service
+            android:name=".ui.LocationTracker"
+            android:enabled="true"
+            android:exported="false" />
+
+
+
+        <activity
+            android:name=".ui.CreateTaskActivity"
+            android:configChanges="orientation"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CreateTaskActivity2"
+            android:configChanges="orientation"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ActivityTask"
+            android:configChanges="orientation"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+
+
+
+        <activity android:name=".ui.Map1"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name=".ui.CreateTaskActivity1"
+            android:configChanges="orientation"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ui.LocationListMain"
+            android:configChanges="orientation"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.MapView1"
+           />
+
+
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SignupActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7292512767354152~9092680097"/>
+
+        <receiver android:name=".receiver.AlertReceiver"/>
+    </application>
+
+</manifest>
